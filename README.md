@@ -59,6 +59,13 @@ node test/test-sunucusu.js
 
 Sonra tarayıcıda `http://localhost:8090` açılır. Panel için `http://localhost:8090/panel.html?test=yonetim@ornek.com` (yönetici) ya da `?test=iha@ornek.com` (kaptan). Gönderilen mailler `http://localhost:8090/posta` sayfasında görünür, hiçbiri gerçekten gönderilmez. Sunucu açıkken ayrı bir terminalde `node test/api-testi.js` bütün akışı test eder.
 
+## Yazarlar
+
+- **Muhammed Aktaş** ([@emin0299](https://github.com/emin0299)): proje fikri, gereksinimler, tasarım kararları, geliştirme ve yayına alma
+
+Katkıda bulunanların listesi GitHub'daki **Contributors** bölümünde. Katkı yapmak isterseniz [CONTRIBUTING.md](CONTRIBUTING.md) dosyasına bakın.
+Bu proje [Erciyes Üniversitesi Quantum Team](https://github.com/eruquantumteam) için geliştirildi.
+
 ## Geliştirme
 
 Proje fikri, gereksinimleri ve kararları kulüp adına Muhammed Aktaş'a aittir. Kodun büyük bölümü [Claude](https://claude.com) (Anthropic) ile birlikte, yapay zekâ destekli olarak yazıldı ve her adımda test edildi.
