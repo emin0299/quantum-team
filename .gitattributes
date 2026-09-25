@@ -1,0 +1,4 @@
+# Metin dosyalarının satır sonları her bilgisayarda LF olsun (Windows uyarılarını da önler)
+* text=auto eol=lf
+*.png binary
+*.jpg binary

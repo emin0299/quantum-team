@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kaptan Paneli | Quantum Team</title>
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0a0d24">
+  <link rel="icon" type="image/png" href="img/logo-64.png">
+  <link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/stil.css">
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/html5-qrcode@2.3.8/html5-qrcode.min.js" defer></script>
+  <script src="icerik.js" defer></script>
+  <script src="js/site.js" defer></script>
+  <script src="js/panel.js" defer></script>
+</head>
+<body data-sayfa="panel">
+  <a class="atla" href="#icerik">İçeriğe geç</a>
+  <header class="ust" data-ust data-ust-alan></header>
+
+  <main id="icerik" class="panel">
+    <!-- Giriş ekranı -->
+    <section class="sayfa-basi sayfa-basi--tam" data-giris-ekrani>
+      <div class="kap dar">
+        <p class="bolum__etiket">Kaptan paneli</p>
+        <h1>Hoş geldin kaptan</h1>
+        <p class="sayfa-basi__metin">Takımına gelen başvuruları gör, mülakat planını hazırla, mülakat günü adayları QR ile karşıla ve sonuçları gönder.
+          Kulüp Google hesabına kayıtlı Gmail adresinle giriş yap.</p>
+        <div class="google-giris" data-google-dugme></div>
+        <div data-giris-mesaj aria-live="polite"></div>
+        <p class="kucuk-not">Giriş yapamıyorsan yönetimden Gmail adresini "Yetkililer" listesine eklemesini iste.</p>
+      </div>
+    </section>
+
+    <!-- Panel -->
+    <div class="panel__uygulama" data-uygulama hidden>
+      <section class="panel__ust">
+        <div class="kap">
+          <div class="panel__kimlik">
+            <div>
+              <p class="bolum__etiket" data-rol></p>
+              <h1 class="panel__baslik">Merhaba, <span data-ad></span></h1>
+              <p class="panel__takimlar" data-takimlarim></p>
+            </div>
+            <div class="panel__arac">
+              <label class="secim">
+                <span>Takım</span>
+                <select data-takim-filtre></select>
+              </label>
+              <button type="button" class="dugme dugme--ikincil dugme--kucuk" data-cikis>Çıkış</button>
+            </div>
+          </div>
+          <nav class="sekmeler" role="tablist" aria-label="Panel bölümleri">
+            <button type="button" role="tab" data-sekme="ozet" aria-selected="true">Özet</button>
+            <button type="button" role="tab" data-sekme="basvurular">Başvurular</button>
+            <button type="button" role="tab" data-sekme="plan">Mülakat planı <span class="rozetcik" data-rozet="plan" hidden></span></button>
+            <button type="button" role="tab" data-sekme="giris">QR giriş</button>
+            <button type="button" role="tab" data-sekme="sonuc">Sonuçlar <span class="rozetcik" data-rozet="sonuc" hidden></span></button>
+            <button type="button" role="tab" data-sekme="rapor">Rapor</button>
+          </nav>
+        </div>
+      </section>
+
+      <div class="kap panel__govde">
+        <div data-bildirim aria-live="polite"></div>
+        <section data-bolum="ozet"></section>
+        <section data-bolum="basvurular" hidden></section>
+        <section data-bolum="plan" hidden></section>
+        <section data-bolum="giris" hidden></section>
+        <section data-bolum="sonuc" hidden></section>
+        <section data-bolum="rapor" hidden></section>
+      </div>
+    </div>
+
+    <dialog class="pencere" data-pencere>
+      <div class="pencere__ic">
+        <button type="button" class="pencere__kapat" data-pencere-kapat aria-label="Kapat">×</button>
+        <div data-pencere-icerik></div>
+      </div>
+    </dialog>
+  </main>
+
+  <footer class="alt" id="iletisim" data-alt-alan></footer>
+</body>
+</html>

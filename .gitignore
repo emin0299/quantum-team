@@ -1,0 +1,18 @@
+# Git'in takip etmeyeceği dosyalar
+
+# İşletim sistemi ve düzenleyici dosyaları
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/
+
+# Sunucudaki eski dosya kopyaları ve paketler
+*.eski
+*.eski2
+*.zip
+
+# Kişisel notlar ve gizli bilgiler buraya konursa GitHub'a gitmez
+notlar/
+*.local.*
+.env
